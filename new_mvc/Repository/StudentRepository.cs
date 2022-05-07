@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using new_mvc.Models;
 using new_mvc.Services;
@@ -40,7 +41,11 @@ namespace new_mvc.Repository
 
         public Student GetStudent(int? Id)
         {
-            Student dbEntity = db.Students.Find(Id);
+            Student dbEntity = db.Students.Include(a => a.Enrollments)
+                .ThenInclude(b => b.Courses)
+                .Include(c => c.Faculty)
+                .SingleOrDefault(m => m.StudentId == Id);
+                //.Find(Id);
             return dbEntity;
         }
 

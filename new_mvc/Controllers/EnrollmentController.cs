@@ -49,8 +49,8 @@ namespace new_mvc.Controllers
         // GET: Enrollment/Create
         public IActionResult Create()
         {
-            ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseId");
-            ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId");
+            ViewData["CourseName"] = new SelectList(_context.Courses, "CourseId", "CourseName");
+            ViewData["StudentName"] = new SelectList(_context.Students, "StudentId", "StudentName");
             return View();
         }
 

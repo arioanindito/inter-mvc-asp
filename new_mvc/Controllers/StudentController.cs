@@ -40,21 +40,26 @@ namespace new_mvc.Controllers
         }
 
         // GET: Student/Details/5
-        public async Task<IActionResult> Details(int? id)
+        //public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
+
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
 
-            var student = await _context.Students.Include(s => s.Faculty)
-                .FirstOrDefaultAsync(m => m.StudentId == id);
-            if (student == null)
-            {
-                return NotFound();
-            }
+            //var student = await _context.Students.Include(s => s.Faculty)
+            //    .FirstOrDefaultAsync(m => m.StudentId == id);
+            //if (student == null)
+            //{
+            //    return NotFound();
+            //}
 
-            return View(student);
+            //return View(student);
+
+            //return View(_Borrower.GetBorrower(ID));
+            return View(_student.GetStudent(id));
         }
 
         // GET: Student/Create

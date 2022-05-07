@@ -154,6 +154,11 @@
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Course/Details.cshtml.g.cs
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Course/Edit.cshtml.g.cs
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Course/Index.cshtml.g.cs
+/Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Enrollment/Create.cshtml.g.cs
+/Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Enrollment/Delete.cshtml.g.cs
+/Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Enrollment/Details.cshtml.g.cs
+/Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Enrollment/Edit.cshtml.g.cs
+/Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Enrollment/Index.cshtml.g.cs
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Faculty/Create.cshtml.g.cs
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Faculty/Delete.cshtml.g.cs
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/Razor/Views/Faculty/Details.cshtml.g.cs
@@ -179,4 +184,3 @@
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/ref/new_mvc.dll
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/new_mvc.pdb
 /Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/new_mvc.genruntimeconfig.cache
-/Users/arioanindito/Projects/new_mvc/new_mvc/obj/Debug/net5.0/new_mvc.csproj.AssemblyReference.cache

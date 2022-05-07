@@ -1,23 +1,26 @@
 ﻿<Properties StartupConfiguration="{896E2975-71A2-477B-8A00-85C9A494594F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="new_mvc/Controllers/StudentController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="new_mvc/Repository/StudentRepository.cs">
     <Files>
-      <File FileName="new_mvc/Controllers/StudentController.cs" Line="29" Column="32" />
-      <File FileName="new_mvc/Controllers/CourseController.cs" Line="25" Column="63" />
-      <File FileName="new_mvc/Models/Student.cs" Line="31" Column="24" />
+      <File FileName="new_mvc/Views/Student/Details.cshtml" Line="89" Column="53" />
+      <File FileName="new_mvc/Controllers/StudentController.cs" Line="52" Column="40" />
+      <File FileName="new_mvc/Repository/StudentRepository.cs" Line="47" Column="29" />
+      <File FileName="new_mvc/Views/Student/Index.cshtml" Line="48" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="new_mvc" expanded="True">
             <Node name="new_mvc" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="StudentController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Repository" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="StudentRepository.cs" selected="True" />
+              </Node>
               <Node name="Services" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Enrollment" expanded="True" />
                 <Node name="Student" expanded="True" />
               </Node>
             </Node>

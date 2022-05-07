@@ -19,21 +19,6 @@ namespace new_mvc.Migrations
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CourseStudent", b =>
-                {
-                    b.Property<int>("CoursesCourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StudentsStudentId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CoursesCourseId", "StudentsStudentId");
-
-                    b.HasIndex("StudentsStudentId");
-
-                    b.ToTable("CourseStudent");
-                });
-
             modelBuilder.Entity("new_mvc.Models.Course", b =>
                 {
                     b.Property<int>("CourseId")
@@ -47,9 +32,43 @@ namespace new_mvc.Migrations
                     b.Property<string>("CourseName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Credit")
+                        .HasColumnType("int");
+
                     b.HasKey("CourseId");
 
                     b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("new_mvc.Models.Enrollment", b =>
+                {
+                    b.Property<int>("EnrollmentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("EnrollmentId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Enrollments");
                 });
 
             modelBuilder.Entity("new_mvc.Models.Faculty", b =>
@@ -99,19 +118,23 @@ namespace new_mvc.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("CourseStudent", b =>
+            modelBuilder.Entity("new_mvc.Models.Enrollment", b =>
                 {
-                    b.HasOne("new_mvc.Models.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesCourseId")
+                    b.HasOne("new_mvc.Models.Course", "Courses")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("new_mvc.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentsStudentId")
+                    b.HasOne("new_mvc.Models.Student", "Students")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Courses");
+
+                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("new_mvc.Models.Student", b =>
@@ -125,9 +148,19 @@ namespace new_mvc.Migrations
                     b.Navigation("Faculty");
                 });
 
+            modelBuilder.Entity("new_mvc.Models.Course", b =>
+                {
+                    b.Navigation("Enrollments");
+                });
+
             modelBuilder.Entity("new_mvc.Models.Faculty", b =>
                 {
                     b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("new_mvc.Models.Student", b =>
+                {
+                    b.Navigation("Enrollments");
                 });
 #pragma warning restore 612, 618
         }
